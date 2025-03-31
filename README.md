@@ -130,7 +130,6 @@ This is a proof of concept project. Feel free to submit issues and pull requests
 - [ ] Uniswap V3 integration
 - [ ] Position management
 - [ ] Advanced yield strategies
-- [ ] UI/Frontend
 - [ ] Audit readiness
 - [ ] Documentation completion
 
