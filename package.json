@@ -1,0 +1,24 @@
+{
+  "name": "dissident-evm-contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Daniel Cabrera <daniel@dissident.finance>",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "3.4.2",
+    "@openzeppelin/contracts-upgradeable": "^5.2.0",
+    "@story-protocol/protocol-core": "https://github.com/storyprotocol/protocol-core-v1",
+    "@story-protocol/protocol-periphery": "https://github.com/storyprotocol/protocol-periphery-v1",
+    "@uniswap/v3-core": "^1.0.1",
+    "@uniswap/v3-periphery": "^1.4.4",
+    "erc6551": "^0.3.1",
+    "solady": "^0.1.12"
+  },
+  "devDependencies": {
+    "ds-test": "https://github.com/dapphub/ds-test"
+  }
+}

@@ -12,3 +12,9 @@ docs/
 
 # Dotenv file
 .env
+.qodo
+
+
+back/
+node_modules/
+forge-cache/
