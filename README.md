@@ -1,19 +1,30 @@
 # Dissident - Story Protocol Yield Optimizer (PoC)
 
 ## Overview
-Dissident is a proof of concept (PoC) for a yield optimization protocol built on top of Story Protocol. This project demonstrates how to efficiently manage yield-generating strategies through staking in MetaPool and providing/removing liquidity in PiperX.
+Dissident is a proof of concept (PoC) for a yield optimization protocol built on top of Story Protocol. This project demonstrates how to efficiently manage yield-generating strategies through staking in MetaPool and providing/removing liquidity in Uniswap V3.
+
+## ⚠️ Work in Progress
+This project is currently under active development and is not ready for production use. Features and interfaces may change significantly as development continues.
 
 ## Features
-- Native token staking in MetaPool
-- Automated liquidity management in PiperX
+- Native ETH staking in MetaPool with story token rewards
+- Automated liquidity management in Uniswap V3
 - Vault system for asset management
-- Unified interface for multiple yield strategies
+- Support for both ERC20 and native token operations
+- Position tracking for Uniswap V3 liquidity positions
+- Auto-compounding functionality for staking rewards
 
 ## Key Components
-- **VaultManager**: Handles asset deposits and withdrawals
-- **StoryStakingManager**: Manages staking operations in MetaPool
-- **UniV3Manager**: Handles liquidity provision in PiperX
-- **Dissident**: Main contract that orchestrates all operations
+- **Dissident**: Main contract that orchestrates all operations and manages state
+- **UniV3Manager**: Library for Uniswap V3 liquidity operations
+- **MetaPool Integration**: For staking ETH and earning rewards
+- **Position Management**: Tracking and managing Uniswap V3 positions
+
+## Technical Stack
+- Solidity 0.7.6
+- Foundry for testing and deployment
+- OpenZeppelin contracts
+- Uniswap V3 periphery and core contracts
 
 ## Architecture
 
@@ -83,3 +94,49 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+## Development
+```bash
+# Install dependencies
+forge install
+
+# Run tests
+forge test
+
+# Deploy contracts
+forge script scripts/Deploy.s.sol
+```
+
+## Testing
+The project includes comprehensive test suites:
+- Unit tests for individual components
+- Integration tests for full workflow scenarios
+- Mock contracts for external dependencies
+
+## Security Considerations
+- Pausable functionality for emergency stops
+- ReentrancyGuard for all state-modifying functions
+- Access control for manager functions
+- Safe math operations for arithmetic
+- Proper balance and allowance checks
+
+
+## Contributing
+This is a proof of concept project. Feel free to submit issues and pull requests.
+
+## Current Status
+- [x] Basic contract structure
+- [x] Staking in MetaPool in Story
+- [ ] Uniswap V3 integration
+- [ ] Position management
+- [ ] Advanced yield strategies
+- [ ] UI/Frontend
+- [ ] Audit readiness
+- [ ] Documentation completion
+
+## License
+MIT
+
+## Disclaimer
+This is an experimental proof of concept. Use at your own risk. Not audited and not ready for production use.
+
